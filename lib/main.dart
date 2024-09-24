@@ -8,6 +8,9 @@ import 'package:todo_list_app_db/models/tasks_time.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+  Hive.registerAdapter(TaskModelAdapter());
+  Hive.registerAdapter(TasksTimeAdapter());
+
   await Hive.openBox<TaskModel>('tasks');
   await Hive.openBox<TasksTime>('tasksTime');
 

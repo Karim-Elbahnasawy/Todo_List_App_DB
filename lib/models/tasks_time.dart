@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'task_model.dart';
+part 'tasks_time.g.dart';
 
 @HiveType(typeId: 1)
 class TasksTime extends HiveObject {
